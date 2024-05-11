@@ -14,7 +14,7 @@ public class DiscountCoupon
 
     public int Percentage { get; set; }
 
-    public bool isActive { get; set; }
+    public bool IsActive { get; set; }
 
     public List<Order> Orders { get; set; } = new();
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebShop.Infrastructure.Persistence;
+using WebShop.Infrastructure.Seeders;
 
 namespace WebShop.Infrastructure.Extensions;
 
@@ -18,6 +19,7 @@ public static class ServiceCollectionExtensions
         services.AddDbContext<WebShopDbContext>(
             options =>
                 options.UseSqlServer(connectionString));
+        services.AddScoped<IWebShopSeeder, WebShopSeeder>();
 
     }
 
